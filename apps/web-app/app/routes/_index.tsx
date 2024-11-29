@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { BODY, HEADING_3 } from "../styles/typography";
+import { Icon } from "../components/Icon/Icon";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Starling Home" }];
@@ -27,6 +28,12 @@ export default function Dashboard() {
               Share your referral link to onboard more homeowners to your client
               list.
             </p>
+            <div>
+              <Icon iconName="search" />
+            </div>
+            <div>
+              <Icon iconName="delete" iconStyles="text-blue-500  text-4xl" />
+            </div>
           </div>
         </div>
       </div>
