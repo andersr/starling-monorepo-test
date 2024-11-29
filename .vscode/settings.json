@@ -1,6 +1,6 @@
 {
   "npm.packageManager": "pnpm",
-  "conventionalCommits.scopes": ["all"],
+  "conventionalCommits.scopes": ["all", "web"],
   "tailwindCSS.classAttributes": [
     "class",
     "className",

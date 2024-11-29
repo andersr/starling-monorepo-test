@@ -4,3 +4,5 @@ dist
 build
 pnpm-lock.yaml
 tmp
+node_modules
+**/node_modules
