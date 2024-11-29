@@ -1,12 +1,21 @@
-import type { MetaFunction } from "@remix-run/node";
+import { type MetaFunction } from "@remix-run/node";
 import { BODY, HEADING_3 } from "../styles/typography";
 import { Icon } from "../components/Icon/Icon";
-
+import { useLoaderData } from "@remix-run/react";
+import { prisma } from "../server/prisma.server";
 export const meta: MetaFunction = () => {
   return [{ title: "Starling Home" }];
 };
 
+export const loader = async () => {
+  const tasks = await prisma.task.count();
+  return {
+    tasks,
+  };
+};
+
 export default function Dashboard() {
+  const { tasks } = useLoaderData<typeof loader>();
   return (
     <>
       <div className="mb-3 mt-4 flex flex-col gap-4 px-4 md:mt-6 md:gap-6 md:px-6">
@@ -34,6 +43,7 @@ export default function Dashboard() {
             <div>
               <Icon iconName="delete" iconStyles="text-blue-500  text-4xl" />
             </div>
+            <div>Tasks: {tasks}</div>
           </div>
         </div>
       </div>
