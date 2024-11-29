@@ -1,7 +1,9 @@
 {
-  "dependencies": {},
   "description": "Monorepo for Starling Home",
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "prettier": "^3.4.1"
+  },
   "engines": {
     "node": ">=20.17.0 < 21",
     "npm": "please-use-pnpm",
