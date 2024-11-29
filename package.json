@@ -1,0 +1,33 @@
+{
+  "dependencies": {},
+  "description": "Monorepo for Starling Home",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.17.0 < 21",
+    "npm": "please-use-pnpm",
+    "pnpm": ">=9.12.3",
+    "yarn": "please-use-pnpm"
+  },
+  "homepage": "https://www.starlinghome.co",
+  "packageManager": "pnpm@9.12.3",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koilpro/starling-monorepo"
+  },
+  "scripts": {
+    "build": "pnpm --stream -r run build",
+    "check:types": "pnpm run --if-present --parallel --stream check:types",
+    "dev": "pnpm run --if-present --parallel --stream dev",
+    "format": "prettier .",
+    "format:check": "pnpm format --check",
+    "format:fix": "pnpm format --write",
+    "lint": "pnpm run --if-present --parallel --stream lint",
+    "lint:fix": "pnpm run --if-present --parallel --stream lint:fix",
+    "pre-commit": "lint-staged && pnpm run check:types && pnpm run test",
+    "prepare": "husky",
+    "prepublish": "pnpm run build",
+    "test": "pnpm run --if-present --parallel --stream test",
+    "test:dev": "pnpm run --if-present --parallel --stream test:dev"
+  }
+}

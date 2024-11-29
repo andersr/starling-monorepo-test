@@ -1,0 +1,10 @@
+{
+  "npm.packageManager": "pnpm",
+  "conventionalCommits.scopes": ["all"],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "class:list",
+    ".*Styles"
+  ]
+}
