@@ -1,21 +1,21 @@
 {
-  "description": "Monorepo for Starling Home",
+  "description": "TEST Monorepo for Starling Home",
   "devDependencies": {
     "husky": "^9.1.7",
     "prettier": "^3.4.1"
   },
   "engines": {
-    "node": "20.x",
+    "node": ">=22.11.0 < 23",
     "npm": "please-use-pnpm",
-    "pnpm": ">=9.12.3",
+    "pnpm": ">=9.14.4 < 10",
     "yarn": "please-use-pnpm"
   },
   "homepage": "https://www.starlinghome.co",
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.14.4",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/koilpro/starling-monorepo"
+    "url": "https://github.com/andersr/starling-monorepo-test"
   },
   "scripts": {
     "build": "pnpm --stream -r run build",
